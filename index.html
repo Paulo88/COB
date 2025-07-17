@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/COB_Circular_Branco.png" type="image/png">
     <title>COB - Conectando Orquestras Brasileiras</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -47,7 +54,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
         }
 
@@ -102,7 +109,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%),
-                        url('https://www.convenioafpesp.com.br/wp-content/uploads/2023/03/orquestra-fascinacao-da-afpesp-abre-12-vagas-para-novos-integrantes.jpg');
+                url('img/capa.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -133,8 +140,8 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-            font-family: 'Cinzel', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Cormorant Garamond', serif;
             letter-spacing: 1px;
         }
 
@@ -143,7 +150,7 @@
             margin-bottom: 2rem;
             opacity: 0.9;
             animation: fadeInUp 1s ease 0.3s both;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
 
         .cta-button {
@@ -218,9 +225,15 @@
         }
 
         .music-icon {
-            font-size: 8rem;
-            color: var(--accent-silver);
+            width: 15rem;
+            height: 15rem;
             animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(192, 192, 192, 0.5));
+        }
+
+        .icon {
+            width: 8rem;
+            height: 4rem;
             filter: drop-shadow(0 0 20px rgba(192, 192, 192, 0.5));
         }
 
@@ -233,18 +246,21 @@
         }
 
         .value-card {
-            background: var(--card-bg);
+            background: url("img/notas-bg.png") no-repeat center center;
+            background-size: cover;
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             border: 1px solid rgba(192, 192, 192, 0.1);
+            position: relative;
         }
+
 
         .value-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             border-color: rgba(192, 192, 192, 0.3);
         }
 
@@ -256,13 +272,23 @@
         }
 
         .value-card h3 {
-            color: var(--accent-silver);
-            margin-bottom: 1rem;
-            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+            /* Ou #333, para contraste com fundo claro */
         }
 
         .value-card p {
-            color: var(--text-secondary);
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .value-symbol {
+            width: 40px;
+            margin-top: 1.5rem;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
         }
 
         /* Benefits Section */
@@ -278,13 +304,13 @@
             padding: 2rem;
             border-radius: 15px;
             border-left: 5px solid var(--accent-silver);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
 
         .benefit-item:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         .benefit-item h4 {
@@ -312,7 +338,7 @@
             height: auto;
             border-radius: 15px;
             margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .ods-content a {
@@ -341,12 +367,12 @@
             border-radius: 15px;
             text-align: center;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
         }
 
         .form-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
         }
 
         .form-button {
@@ -401,12 +427,33 @@
             color: var(--text-secondary);
         }
 
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a img {
+            width: 32px;
+            height: 32px;
+            /*filter: brightness(0) invert(1);*/
+            /* Para deixar branco */
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.1);
+        }
+
+
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -414,8 +461,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         /* Responsive */
@@ -461,10 +515,11 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="container">
-            <a href="#" class="logo">COB</a>
+            <img src="img/COB_Horizontal_Branco.png" alt="Logo COB" class="icon">
             <ul class="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#beneficios">Benefícios</a></li>
@@ -490,14 +545,17 @@
             <h2 class="section-title">Sobre o COB</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>O COB é uma iniciativa dedicada a fomentar a colaboração entre orquestras de todo o país, visando estabelecer uma rede colaborativa.</p>
-                    
-                    <p>Nosso propósito é facilitar o intercâmbio de conhecimentos, materiais e técnicas relacionadas à gestão de grupos sinfônicos, promovendo, assim, uma administração mais coesa e eficaz.</p>
-                    
-                    <p>Por meio dessa parceria, o COB busca desenvolver, em conjunto com as orquestras, ferramentas e estratégias que contribuam para uma gestão mais eficiente e sustentável dessas instituições.</p>
+                    <p>O COB é uma iniciativa dedicada a fomentar a colaboração entre orquestras de todo o país, visando
+                        estabelecer uma rede colaborativa.</p>
+
+                    <p>Nosso propósito é facilitar o intercâmbio de conhecimentos, materiais e técnicas relacionadas à
+                        gestão de grupos sinfônicos, promovendo, assim, uma administração mais coesa e eficaz.</p>
+
+                    <p>Por meio dessa parceria, o COB busca desenvolver, em conjunto com as orquestras, ferramentas e
+                        estratégias que contribuam para uma gestão mais eficiente e sustentável dessas instituições.</p>
                 </div>
                 <div class="about-visual">
-                    <div class="music-icon">🎼</div>
+                    <img src="img/COB_Circular_Branco.png" alt="Logo COB" class="music-icon">
                 </div>
             </div>
         </div>
@@ -508,19 +566,21 @@
             <h2 class="section-title">Missão, Visão e Valores</h2>
             <div class="values-grid">
                 <div class="value-card">
-                    <div class="value-icon">🎯</div>
                     <h3>Missão</h3>
-                    <p>Promover a interlocução entre orquestras brasileiras.</p>
+                    <p>Promover a interlocução entre orquestras brasileiras para
+                        fortalecer o cenário musical nacional por meio da colaboração e do intercâmbio cultural.</p>
+                    <img src="img/nota01.png" alt="Símbolo Missão" class="value-symbol">
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">👁️</div>
                     <h3>Visão</h3>
-                    <p>Ser reconhecido por cooperar com a inovação das práticas de gestão dos grupos sinfônicos brasileiros.</p>
+                    <p>Ser reconhecido por cooperar com a inovação das práticas de gestão dos grupos sinfônicos
+                        brasileiros.</p>
+                    <img src="img/nota02.png" alt="Símbolo Missão" class="value-symbol">
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">⭐</div>
                     <h3>Valores</h3>
                     <p>Colaboração, Diálogo permanente, Articulação cultural, Compromisso social e Conhecimento.</p>
+                    <img src="img/nota03.png" alt="Símbolo Missão" class="value-symbol">
                 </div>
             </div>
         </div>
@@ -529,26 +589,27 @@
     <section id="beneficios" class="section">
         <div class="container">
             <h2 class="section-title">Benefícios da Rede COB</h2>
-            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">Ao integrar o COB, seu grupo terá acesso a:</p>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">Ao
+                integrar o COB, seu grupo terá acesso a:</p>
             <div class="benefits-list">
                 <div class="benefit-item">
-                    <h4>📈 Maior Visibilidade</h4>
+                    <h4> Maior Visibilidade</h4>
                     <p>Aumento de visibilidade através das nossas redes sociais e eventos</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>🤝 Colaborações</h4>
+                    <h4> Colaborações</h4>
                     <p>Oportunidades de colaborações com outras orquestras</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>📚 Aprimoramento</h4>
+                    <h4> Aprimoramento</h4>
                     <p>Informações para aprimoramento de certos segmentos da instituição</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>🎵 Conteúdo Específico</h4>
+                    <h4> Conteúdo Específico</h4>
                     <p>Conteúdo específico sobre grupos sinfônicos</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>👥 Grupos de Trabalho</h4>
+                    <h4> Grupos de Trabalho</h4>
                     <p>GTs de profissionais específicos de orquestra, entre outros</p>
                 </div>
             </div>
@@ -559,14 +620,30 @@
         <div class="container">
             <h2 class="section-title">Agenda 2030</h2>
             <div class="ods-content">
-                <p>A Agenda 2030 é um plano de ação para as pessoas, para o planeta e para a prosperidade. Também busca fortalecer a paz universal com mais liberdade e reconhece que a erradicação da pobreza em todas as suas formas e dimensões é o maior desafio global.</p>
-                
-                <img src="https://gtagenda2030.org.br/wp-content/uploads/2019/10/objetivos_port.png" alt="17 Objetivos de Desenvolvimento Sustentável" class="ods-image">
-                
-                <p>Os 17 Objetivos de Desenvolvimento Sustentável e 169 metas que integram a Agenda 2030 demonstram a escala e a ambição desta nova Agenda universal, pactuada pelo Brasil e outros 192 países que integram a ONU.</p>
-                
+                <p>A Agenda 2030 é um plano de ação para as pessoas, para o planeta e para a prosperidade. Também busca
+                    fortalecer a paz universal com mais liberdade e reconhece que a erradicação da pobreza em todas as
+                    suas formas e dimensões é o maior desafio global.</p>
+
+                <img src="img/18ads.png" alt="17 Objetivos de Desenvolvimento Sustentável" class="ods-image">
+
+                <p>Seus 17 Objetivos de Desenvolvimento Sustentável (ODS) e 169 metas demonstram a escala e a ambição
+                    desse compromisso universal, firmado pelo Brasil e outros 192 países que integram a Organização das
+                    Nações Unidas (ONU).
+                </p>
+
+                <p>No Brasil, foi incorporado ainda um 18º ODS, que reconhece a cultura como um pilar essencial para o
+                    desenvolvimento sustentável. Esse objetivo destaca o papel das expressões culturais na preservação
+                    da memória, na promoção da diversidade e na transformação social.
+                </p>
+
+                <p>As orquestras e instituições culturais também integram esse movimento. Ao promoverem o acesso à
+                    cultura, à educação e à inclusão social, elas contribuem para a construção de uma sociedade mais
+                    justa, igualitária e sustentável.
+                </p>
+
                 <p style="margin-top: 2rem;">
-                    <strong>Fonte:</strong> <a href="https://gtagenda2030.org.br/ods/" target="_blank">GT Agenda 2030</a>
+                    <strong>Fonte:</strong> <a href="https://gtagenda2030.org.br/ods/" target="_blank">GT Agenda
+                        2030</a>
                 </p>
             </div>
         </div>
@@ -579,7 +656,8 @@
                 <div class="form-card">
                     <h3>🎼 Representantes de Orquestra</h3>
                     <p>Cadastre sua orquestra e faça parte da nossa rede colaborativa</p>
-                    <a href="https://forms.gle/hMpP849a5t2mL4PA7" target="_blank" class="form-button">Cadastrar Orquestra</a>
+                    <a href="https://forms.gle/hMpP849a5t2mL4PA7" target="_blank" class="form-button">Cadastrar
+                        Orquestra</a>
                 </div>
                 <div class="form-card">
                     <h3>🙋‍♂️ Voluntários</h3>
@@ -594,8 +672,10 @@
         <div class="container">
             <h2 class="section-title">Recursos Educacionais</h2>
             <div style="text-align: center;">
-                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">Acesse nossos e-books e materiais educacionais desenvolvidos especialmente para orquestras</p>
-                <a href="https://www.canva.com/design/DAGJtz-STPM/2JYxgmIWLpyN8EdE7owWeQ/edit?utm_content=DAGJtz-STPM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="cta-button">📚 Acessar E-books</a>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">Acesse nossos e-books e
+                    materiais educacionais desenvolvidos especialmente para orquestras</p>
+                <a href="https://www.canva.com/design/DAGJtz-STPM/2JYxgmIWLpyN8EdE7owWeQ/edit?utm_content=DAGJtz-STPM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                    target="_blank" class="cta-button">📚 Acessar E-books</a>
             </div>
         </div>
     </section>
@@ -612,9 +692,25 @@
                     <p>📧 orquestrasbrasileiras@gmail.com</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Nosso Foco</h3>
-                    <p>Orquestras Sinfônicas e Filarmônicas, Orquestras Comunitárias, Orquestras de Projetos Socioculturais e de Universidades</p>
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/orquestrasbr/" target="_blank" aria-label="Instagram">
+                            <img src="img/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/company/conectando-orquestras-brasileiras/" target="_blank"
+                            aria-label="LinkedIn">
+                            <img src="img/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://linktr.ee/orquestrasbr" target="_blank" aria-label="Linktree">
+                            <img src="img/link-externo.png" alt="Linktree">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC6H6IbeDM5X9h0JjqljnGnw" target="_blank"
+                            aria-label="YouTube">
+                            <img src="img/youtube.png" alt="YouTube">
+                        </a>
+                    </div>
                 </div>
+
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 COB - Conectando Orquestras Brasileiras. Todos os direitos reservados.</p>
@@ -638,7 +734,7 @@
         });
 
         // Adicionar classe active no scroll com backdrop blur
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(15, 15, 15, 0.95)';
@@ -650,4 +746,5 @@
         });
     </script>
 </body>
+
 </html>
