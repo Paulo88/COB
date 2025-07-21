@@ -46,6 +46,12 @@
             padding: 0 20px;
         }
 
+        .container-vagas {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         /* Header */
         header {
             background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
@@ -394,6 +400,53 @@
             box-shadow: 0 5px 20px rgba(192, 192, 192, 0.4);
         }
 
+        /* Forms Section Vagas */
+        .forms-grid-vagas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .form-card-vagas {
+            background: linear-gradient(135deg, var(--primary-green) 0%, #1a3d2b 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-card-vagas:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .button-wrapper-vagas {
+            text-align: center;
+            /* Centraliza conteúdo inline/block */
+        }
+
+        .form-button-vagas {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-silver) 0%, var(--light-silver) 100%);
+            color: var(--darker-bg);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 15px rgba(192, 192, 192, 0.3);
+            font-family: 'Cinzel', serif;
+        }
+
+        .form-button-vagas:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(192, 192, 192, 0.4);
+        }
+
         /* Footer */
         footer {
             background: var(--darker-bg);
@@ -525,6 +578,7 @@
                 <li><a href="#beneficios">Benefícios</a></li>
                 <li><a href="#agenda2030">Agenda 2030</a></li>
                 <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="#vagas">Vagas</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -664,6 +718,24 @@
                     <p>Seja um voluntário e contribua para o crescimento da música sinfônica brasileira</p>
                     <a href="https://forms.gle/Ahn7372zGSSZJ6HX7" target="_blank" class="form-button">Ser Voluntário</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vagas" class="section">
+        <div class="container-vagas">
+            <h2 class="section-title">Vagas</h2>
+            <div class="forms-grid-vagas">
+                <div class="form-card-vagas">
+                    <h3>📝 Vagas</h3>
+                    <p>Acesse os editais e descubra oportunidades de participar de orquestras e projetos musicais.</p>
+
+                    <div class="button-wrapper-vagas">
+                        <a href="https://drive.google.com/drive/folders/1nwou1GyrOiYLcxlaO2KSKSYmz4dTFUCy?usp=sharing"
+                            target="_blank" class="form-button-vagas">Ver Vagas</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
